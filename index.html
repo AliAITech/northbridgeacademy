@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NorthBridge Academy — Make Every Goal Achievable</title>
 <meta name="description" content="NorthBridge Academy — an initiative of PurpleLife Psychology Clinic in Richmond Hill, Ontario. Short, practical micro-courses designed for quick entry into real jobs. Opening soon.">
-<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="icon" type="image/png" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -20,30 +20,24 @@
   body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
   /* Header */
-  header{position:sticky;top:0;z-index:10;background:rgba(251,250,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--tint-2)}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--tint-2)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
   .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
-  .brand svg{height:50px;width:auto;display:block}
+  .brand img{height:52px;width:auto;display:block}
   .brand .bname{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.16rem;letter-spacing:.04em;color:var(--char-deep);line-height:1.05;text-transform:uppercase}
   .brand .bsub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.52em;color:var(--red);text-transform:uppercase}
   .nav a.cta{background:var(--char-deep);color:#fff;text-decoration:none;padding:10px 20px;border-radius:999px;font-weight:600;font-size:.92rem;transition:background .2s}
   .nav a.cta:hover{background:var(--red)}
   /* Hero */
-  .hero{background:radial-gradient(1000px 500px at 88% -10%,rgba(191,43,48,.5) 0%,transparent 55%),linear-gradient(135deg,#1d2023 0%,var(--char-deep) 55%,#3a4046 100%);color:#fff;padding:92px 0 84px}
-  .lockup{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-  .lockup svg{height:118px;width:auto;flex:none}
-  .lockup .lname{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(2rem,5.4vw,3.4rem);letter-spacing:.03em;line-height:1.02;text-transform:uppercase}
-  .lockup .lsub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.5rem);letter-spacing:.58em;color:#e88b8e;text-transform:uppercase;margin-top:6px}
-  .slogan{display:flex;align-items:center;gap:16px;margin:26px 0 8px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:clamp(1.15rem,2.4vw,1.45rem);color:#f3e3e3}
-  .slogan::before,.slogan::after{content:"";height:2px;width:52px;background:var(--red-soft);flex:none}
-  .slogan::after{display:none}
-  .badge{display:inline-block;margin-top:30px;background:rgba(191,43,48,.16);border:1px solid rgba(232,139,142,.7);color:#f2c9cb;padding:6px 16px;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-  .hero p.lede{max-width:660px;font-size:1.12rem;color:#d8d3d3;margin-top:18px}
-  .hero .actions{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero{background:radial-gradient(900px 420px at 50% -8%,#f8ecec 0%,transparent 60%),#ffffff;color:var(--ink);padding:72px 0 76px;text-align:center;border-bottom:1px solid var(--tint-2)}
+  .hero .logo-full{max-width:700px;width:100%;height:auto;display:block;margin:0 auto}
+  .badge{display:inline-block;margin-top:34px;background:#fbeeec;border:1px solid #eec5c2;color:var(--red);padding:6px 16px;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  .hero p.lede{max-width:660px;font-size:1.12rem;color:var(--muted);margin:18px auto 0}
+  .hero .actions{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
   .btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 28px;border-radius:999px;font-size:1rem;transition:transform .15s,background .2s}
   .btn:hover{transform:translateY(-2px)}
   .btn-red{background:var(--red);color:#fff}
-  .btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+  .btn-ghost{border:1.5px solid #c9ced2;color:var(--char-deep)}
   /* Sections */
   section{padding:84px 0}
   .kicker{font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
@@ -74,7 +68,7 @@
   .contact-list a{color:#f0e9e9;text-decoration:none}
   footer{padding:34px 0 44px;text-align:center;color:var(--muted);font-size:.9rem}
   footer .fine{margin-top:6px;font-size:.82rem;color:#979ea4}
-  @media (max-width:720px){.contact-card{grid-template-columns:1fr;padding:34px}.hero{padding:72px 0 64px}section{padding:60px 0}.lockup svg{height:92px}}
+  @media (max-width:720px){.contact-card{grid-template-columns:1fr;padding:34px}.hero{padding:52px 0 56px}section{padding:60px 0}}
 </style>
 </head>
 <body>
@@ -82,7 +76,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#" aria-label="NorthBridge Academy">
-      <svg viewBox="0 0 200 190" aria-hidden="true"><g fill="none" stroke="#BF2B30" stroke-linecap="round"><path d="M 47 74 A 64 64 0 0 0 74 165" stroke-width="17"/><path d="M 153 74 A 64 64 0 0 1 126 165" stroke-width="17"/><path d="M 78 100 A 46 46 0 0 0 92 163" stroke-width="10"/><path d="M 122 100 A 46 46 0 0 1 108 163" stroke-width="10"/></g><circle cx="100" cy="34" r="17" fill="#BF2B30"/><path d="M 100 88 L 121 168 L 79 168 Z" fill="#33393F"/></svg>
+      <img src="icon.png" alt="NorthBridge Academy logo">
       <span>
         <span class="bname">North Bridge</span><br>
         <span class="bsub">Academy</span>
@@ -94,14 +88,7 @@
 
 <div class="hero">
   <div class="wrap">
-    <div class="lockup">
-      <svg viewBox="0 0 200 190" aria-hidden="true"><g fill="none" stroke="#BF2B30" stroke-linecap="round"><path d="M 47 74 A 64 64 0 0 0 74 165" stroke-width="17"/><path d="M 153 74 A 64 64 0 0 1 126 165" stroke-width="17"/><path d="M 78 100 A 46 46 0 0 0 92 163" stroke-width="10"/><path d="M 122 100 A 46 46 0 0 1 108 163" stroke-width="10"/></g><circle cx="100" cy="34" r="17" fill="#BF2B30"/><path d="M 100 88 L 121 168 L 79 168 Z" fill="#454C52"/></svg>
-      <div>
-        <div class="lname">North Bridge</div>
-        <div class="lsub">Academy</div>
-      </div>
-    </div>
-    <p class="slogan">Make Every Goal Achievable</p>
+    <img class="logo-full" src="logo-full.png" alt="North Bridge Academy — Make Every Goal Achievable">
     <span class="badge">Opening Soon</span>
     <p class="lede">NorthBridge Academy offers short, practical micro-courses built for one purpose: helping you step into an in-demand job quickly — no long programs, no filler. Just the skills employers actually need, taught hands-on.</p>
     <div class="actions">
