@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Essentials Canada (NBL-ENT-109) — NorthBridge Academy</title>
+<meta name="description" content="Startup Essentials Canada at NorthBridge Academy, Richmond Hill — 30 scheduled hours, 15 sessions, Online / Hybrid delivery. Program code NBL-ENT-109.">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Syne';src:url('../fonts/syne-var.woff2') format('woff2');font-weight:400 800;font-display:swap}
+  :root{
+    --char:#33393f; --char-deep:#22262a; --red:#bf2b30; --red-soft:#d34a4f;
+    --tint:#f8f1f1; --tint-2:#eedede; --ink:#26292d; --muted:#5f666d;
+    --paper:#fbfaf9; --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--tint-2)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+  .brand img{height:52px;width:auto;display:block}
+  .brand .bname{font-family:'Syne',sans-serif;font-weight:700;font-size:1.14rem;letter-spacing:0;color:var(--char-deep);line-height:1.05;text-transform:uppercase}
+  .brand .bsub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.52em;color:var(--red);text-transform:uppercase}
+  .nav a.cta{background:var(--char-deep);color:#fff;text-decoration:none;padding:10px 20px;border-radius:999px;font-weight:600;font-size:.92rem;transition:background .2s}
+  .nav a.cta:hover{background:var(--red)}
+  .kicker{font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+  h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:var(--char-deep);line-height:1.15;margin-bottom:14px}
+  section{padding:44px 0}
+  .crumb{padding:26px 0 0}
+  .crumb a{color:var(--red);text-decoration:none;font-weight:600;font-size:.95rem}
+  .crumb a:hover{text-decoration:underline}
+  .course-head{padding:22px 0 8px}
+  .course-head h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:700;letter-spacing:-0.01em;color:var(--char-deep);line-height:1.12}
+  .codechip{display:inline-block;margin-top:14px;background:var(--tint);border:1px solid var(--tint-2);color:var(--char-deep);padding:5px 14px;border-radius:999px;font-size:.85rem;font-weight:600;letter-spacing:.08em}
+  .hero-photo{width:100%;height:330px;object-fit:cover;border-radius:20px;display:block;margin-top:26px;box-shadow:0 10px 30px rgba(34,38,42,.10)}
+  .summary{background:var(--white);border:1px solid var(--tint-2);border-radius:20px;box-shadow:0 6px 24px rgba(34,38,42,.05);padding:8px 30px;margin-top:34px}
+  .summary table{width:100%;border-collapse:collapse}
+  .summary th,.summary td{text-align:left;padding:13px 8px;border-bottom:1px solid var(--tint);vertical-align:top;font-size:1rem}
+  .summary tr:last-child th,.summary tr:last-child td{border-bottom:none}
+  .summary th{width:210px;color:var(--char-deep);font-weight:600}
+  .summary td{color:var(--ink)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .panel{background:var(--white);border:1px solid var(--tint-2);border-radius:20px;padding:28px 30px;box-shadow:0 6px 24px rgba(34,38,42,.04)}
+  ul.ticks{list-style:none}
+  ul.ticks li{padding:7px 0 7px 28px;position:relative;border-bottom:1px solid var(--tint)}
+  ul.ticks li:last-child{border-bottom:none}
+  ul.ticks li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--red)}
+  .prose p{margin-bottom:12px;color:var(--ink)}
+  .prose p:last-child{margin-bottom:0}
+  .prose .lbl{font-weight:600;color:var(--char-deep)}
+  ol.sessions{list-style:none;counter-reset:sess}
+  ol.sessions li{background:var(--white);border:1px solid var(--tint-2);border-radius:16px;padding:22px 26px;margin-bottom:14px;box-shadow:0 4px 16px rgba(34,38,42,.03)}
+  ol.sessions h3{font-family:'Fraunces',Georgia,serif;font-size:1.16rem;color:var(--char-deep);margin-bottom:6px}
+  ol.sessions h3 .snum{color:var(--red);font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+  ol.sessions p{color:var(--ink)}
+  ol.sessions p.so{margin-top:8px;font-size:.94rem;color:var(--muted)}
+  ol.sessions p.so b{color:var(--char-deep)}
+  .scope{background:linear-gradient(180deg,var(--tint) 0%,#fdf7f7 100%);border:1px solid var(--tint-2);border-left:5px solid var(--red);border-radius:16px;padding:26px 30px}
+  .scope p{color:var(--ink)}
+  .cta-band{background:var(--char-deep);color:#f0e9e9;border-radius:24px;padding:42px 48px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+  .cta-band h2{color:#fff;margin-bottom:8px}
+  .cta-band p{color:#cfc8c8;max-width:560px}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 28px;border-radius:999px;font-size:1rem;transition:transform .15s,background .2s;background:var(--red);color:#fff;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  footer{padding:34px 0 44px;text-align:center;color:var(--muted);font-size:.9rem}
+  footer .fine{margin-top:6px;font-size:.82rem;color:#979ea4}
+  @media (max-width:720px){.cols{grid-template-columns:1fr}.cta-band{padding:32px}.summary th{width:130px}.hero-photo{height:230px}section{padding:34px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="NorthBridge Academy">
+      <img src="../icon.png" alt="NorthBridge Academy logo">
+      <span>
+        <span class="bname">North Bridge</span><br>
+        <span class="bsub">Academy</span>
+      </span>
+    </a>
+    <a class="cta" href="../index.html#contact">Contact Us</a>
+  </div>
+</header>
+
+<div class="wrap crumb"><a href="../index.html#courses">&larr; All courses</a></div>
+
+<div class="wrap course-head">
+  <p class="kicker">Course Details</p>
+  <h1>Startup Essentials Canada</h1>
+  <span class="codechip">Program Code: NBL-ENT-109</span>
+  <img class="hero-photo" src="../course-startup.jpg" alt="Startup Essentials Canada at NorthBridge Academy">
+</div>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="summary">
+      <table>
+        <tr><th>Duration</th><td>30 scheduled hours</td></tr>
+        <tr><th>Sessions</th><td>15 sessions &times; 2 hours (1 hour 45 minutes of instruction and practice, plus a 15-minute break)</td></tr>
+        <tr><th>Delivery Mode</th><td>Online / Hybrid</td></tr>
+        <tr><th>Course Type</th><td>Short Course / Practical</td></tr>
+        <tr><th>Credential</th><td>NorthBridge Academy Certificate of Completion</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">About This Course</p>
+    <h2>What this course covers</h2>
+    <div class="prose"><p>This course introduces the practical foundations of starting a small business in Ontario. Participants explore problem selection, customer discovery, business models, market research, legal structures, registrations, pricing, bookkeeping awareness, sales, marketing, operations, risk, and launch planning. The course emphasizes responsible referral to lawyers, accountants, insurers, municipalities, and regulated professionals when specialized advice is required.</p></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap cols">
+    <div class="panel">
+      <p class="kicker">Learning Objectives</p>
+      <h2 style="font-size:1.5rem">What you will learn</h2>
+      <ul class="ticks">
+          <li>Evaluate a business idea using customer and market evidence.</li>
+          <li>Develop a clear value proposition and basic business model.</li>
+          <li>Identify common Ontario business structures, registrations, taxes, permits, and professional-advice needs.</li>
+          <li>Create basic pricing, sales, marketing, operations, and cash-flow assumptions.</li>
+          <li>Recognize startup risks, insurance considerations, and compliance boundaries.</li>
+          <li>Present a practical 90-day launch plan and business pitch.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <p class="kicker">Target Audience</p>
+      <h2 style="font-size:1.5rem">Who this course is for</h2>
+      <ul class="ticks">
+          <li>Newcomers and refugees considering self-employment.</li>
+          <li>Aspiring entrepreneurs and freelancers.</li>
+          <li>Owners of very small or home-based businesses.</li>
+          <li>Participants transitioning a skill into a legal, customer-focused business.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Delivery &amp; Assessment</p>
+    <h2>How the course is delivered and assessed</h2>
+    <div class="prose">
+      <p><span class="lbl">Delivery and learning methods:</span> Instructor-led presentations, guided discussion, demonstrations, case studies, individual and group exercises, role-play or simulations, applied assignments, structured feedback, and a final practical or integrative activity appropriate to the subject area.</p>
+      <p><span class="lbl">Assessment:</span> Customer-discovery assignment 20%; business-model exercises 20%; financial and pricing worksheet 20%; marketing plan 15%; final pitch and 90-day launch plan 25%.</p>
+        <p><span class="lbl">Certificate requirements:</span> Minimum 80% attendance, completion of required learning activities and assessments, and a minimum overall grade of 70%. The certificate identifies the course title and scheduled duration and does not represent a licence, regulated credential, diploma, or guarantee of employment.</p>
+      <p><span class="lbl">Required materials and technology:</span> Internet-enabled device, spreadsheet and presentation software, notebook, and instructor templates.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Course Outline</p>
+    <h2>Session by session</h2>
+    <ol class="sessions">
+        <li>
+          <h3><span class="snum">Session 1</span>Entrepreneurship in Ontario</h3>
+          <p>Entrepreneurial mindset, self-employment realities, opportunity identification, ethical business, and newcomer advantages and challenges.</p>
+          <p class="so"><b>Learning objectives:</b> Assess entrepreneurship readiness; identify opportunities; recognize common startup risks.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 2</span>Problem Selection and Customer Discovery</h3>
+          <p>Defining a real problem, customer interviews, assumptions, observation, and evidence-based validation.</p>
+          <p class="so"><b>Learning objectives:</b> Formulate customer hypotheses; conduct interviews; summarize evidence.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 3</span>Target Market and Competitive Research</h3>
+          <p>Customer segments, market size logic, competitor mapping, substitutes, online research, and avoiding unsupported claims.</p>
+          <p class="so"><b>Learning objectives:</b> Define a target segment; analyse competitors; identify a market gap.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 4</span>Value Proposition and Business Model</h3>
+          <p>Value proposition, channels, customer relationships, key activities, resources, partners, revenue, and costs.</p>
+          <p class="so"><b>Learning objectives:</b> Create a business-model canvas; articulate value; connect activities to revenue.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 5</span>Business Structures and Registration Awareness</h3>
+          <p>Sole proprietorship, partnership, corporation, business-name registration, CRA accounts, and when professional advice is needed.</p>
+          <p class="so"><b>Learning objectives:</b> Compare structures; identify registration steps; recognize advice boundaries.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 6</span>Licences, Permits, Zoning, and Insurance</h3>
+          <p>Municipal requirements, home-based business considerations, sector permits, liability, property and professional insurance awareness.</p>
+          <p class="so"><b>Learning objectives:</b> Identify possible permits; assess insurance needs; create a compliance checklist.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 7</span>Pricing and Unit Economics</h3>
+          <p>Cost identification, labour, materials, overhead, margins, competitor pricing, discounts, and break-even thinking.</p>
+          <p class="so"><b>Learning objectives:</b> Calculate basic costs and price; estimate contribution margin; avoid underpricing.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 8</span>Bookkeeping, Tax, and Cash-Flow Awareness</h3>
+          <p>Record keeping, invoices, receipts, sales tax awareness, business expenses, cash flow, and accountant referral.</p>
+          <p class="so"><b>Learning objectives:</b> Organize records; distinguish revenue and cash flow; identify tax-support needs.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 9</span>Brand Foundations and Market Positioning</h3>
+          <p>Business name, promise, audience, tone, trust signals, visual consistency, and ethical claims.</p>
+          <p class="so"><b>Learning objectives:</b> Define brand position; write a clear promise; identify trust-building elements.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 10</span>Digital Marketing and Lead Generation</h3>
+          <p>Website basics, social media, local search, content, referrals, email, community outreach, and campaign measurement.</p>
+          <p class="so"><b>Learning objectives:</b> Select channels; create a simple content plan; define lead metrics.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 11</span>Sales and Customer Conversations</h3>
+          <p>Discovery, proposals, quotations, objection handling, follow-up, deposits, and ethical selling.</p>
+          <p class="so"><b>Learning objectives:</b> Conduct a sales conversation; prepare a quotation; develop a follow-up process.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 12</span>Operations and Service Delivery</h3>
+          <p>Workflow, suppliers, scheduling, quality control, customer communication, documentation, and continuous improvement.</p>
+          <p class="so"><b>Learning objectives:</b> Map a service workflow; define quality checks; identify operational bottlenecks.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 13</span>Risk, Contracts, Privacy, and Consumer Trust</h3>
+          <p>Contract awareness, terms, cancellations, data privacy, complaints, refunds, and use of professional legal support.</p>
+          <p class="so"><b>Learning objectives:</b> Identify key business risks; establish basic policies; recognize legal referral needs.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 14</span>Growth, Partnerships, and Funding Readiness</h3>
+          <p>Organic growth, partnerships, grants and loans awareness, responsible borrowing, metrics, and capacity planning.</p>
+          <p class="so"><b>Learning objectives:</b> Evaluate growth options; identify potential partners; prepare funding information.</p>
+        </li>
+        <li>
+          <h3><span class="snum">Session 15</span>Final Business Pitch and 90-Day Launch Plan</h3>
+          <p>Presentation of validated problem, customer, model, pricing, marketing, compliance checklist, milestones, and risks.</p>
+          <p class="so"><b>Learning objectives:</b> Deliver a concise pitch; defend assumptions; create a practical launch plan.</p>
+        </li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="scope">
+      <p class="kicker">Scope &amp; Limitations</p>
+      <p>Business education only. The course does not provide legal, accounting, tax, immigration, investment, or licensing advice and does not guarantee business success.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>Interested in this course?</h2>
+        <p>Course dates will be announced soon. To pre-register your interest in Startup Essentials Canada or to ask about upcoming sessions, contact the academy — we would love to hear from you.</p>
+      </div>
+      <a class="btn" href="../index.html#contact">Pre-register — Contact Us</a>
+    </div>
+    <p style="margin-top:26px"><a href="../index.html#courses" style="color:var(--red);font-weight:600;text-decoration:none">&larr; Back to all courses</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 NorthBridge Academy — An initiative of PurpleLife Psychology Clinic</div>
+    <div class="fine">northbridgeacademy.study · Richmond Hill, Ontario, Canada</div>
+  </div>
+</footer>
+
+</body>
+</html>
