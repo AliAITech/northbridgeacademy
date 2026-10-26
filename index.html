@@ -96,7 +96,7 @@
 </header>
 
 <div class="hero">
-  <video class="bg" autoplay muted loop playsinline poster="hero-building.jpg">
+  <video class="bg" autoplay muted loop playsinline preload="auto" poster="hero-building.jpg">
     <source src="hero-rise.mp4" type="video/mp4">
   </video>
   <div class="shade"></div>
@@ -223,5 +223,8 @@
   </div>
 </footer>
 
+<script>
+(function(){var v=document.querySelector('.hero video.bg');if(!v)return;var tried=false;function p(){v.play().then(function(){}).catch(function(){})}p();document.addEventListener('touchstart',function(){if(!tried){tried=true;p()}},{passive:true});document.addEventListener('click',function(){if(!tried){tried=true;p()}});document.addEventListener('visibilitychange',function(){if(!document.hidden&&v.paused)p()});})();
+</script>
 </body>
 </html>
