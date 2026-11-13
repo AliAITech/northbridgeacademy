@@ -78,6 +78,19 @@
   footer{padding:34px 0 44px;text-align:center;color:var(--muted);font-size:.9rem}
   footer .fine{margin-top:6px;font-size:.82rem;color:#979ea4}
   @media (max-width:720px){.contact-card{grid-template-columns:1fr;padding:34px}.hero .wrap{padding-top:76px;padding-bottom:84px}section{padding:60px 0}}
+
+  .nb-form-card{background:var(--white);border:1px solid var(--tint-2);border-radius:24px;padding:40px 48px;margin-top:28px;box-shadow:0 6px 24px rgba(34,38,42,.05)}
+  .nb-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  .nb-form .full{grid-column:1/-1}
+  .nb-form label{display:block;font-size:.85rem;font-weight:600;color:var(--char-deep);margin-bottom:6px}
+  .nb-form input,.nb-form textarea{width:100%;padding:12px 14px;border:1px solid #d8dde1;border-radius:12px;font:inherit;font-size:.95rem;background:#fbfcfc;color:var(--char-deep)}
+  .nb-form input:focus,.nb-form textarea:focus{outline:2px solid var(--red);border-color:transparent}
+  .nb-form button{grid-column:1/-1;justify-self:start;background:var(--red);color:#fff;border:none;padding:14px 32px;border-radius:999px;font:inherit;font-weight:600;font-size:1rem;cursor:pointer;transition:transform .15s,background .2s}
+  .nb-form button:hover{transform:translateY(-2px)}
+  .nb-form button:disabled{opacity:.6;cursor:wait}
+  .nb-form-status{grid-column:1/-1;font-size:.95rem;min-height:1.2em}
+  .nb-form-status.ok{color:#1e7d46}.nb-form-status.err{color:#b3261e}
+  @media (max-width:720px){.nb-form{grid-template-columns:1fr}.nb-form-card{padding:30px 24px}}
 </style>
 </head>
 <body>
@@ -205,13 +218,28 @@
       <div>
         <p class="kicker" style="color:#e88b8e">Visit Us</p>
         <h2>We're getting ready to welcome our first students</h2>
-        <p>Course dates will be announced soon. To ask about upcoming courses or to join the interest list, contact the clinic — we'd love to hear from you.</p>
+        <p>Course dates will be announced soon. To ask about upcoming courses or to join the interest list, contact us — we'd love to hear from you.</p>
       </div>
       <ul class="contact-list">
         <li><b>Address</b><br>225 East Beaver Creek Road,<br>Richmond Hill, ON L4B 3P4</li>
         <li><b>Phone</b><br><a href="tel:+19058685312">(905) 868-5312</a></li>
-        <li><b>Email</b><br><a href="mailto:Info@purplelifeclinic.ca">Info@purplelifeclinic.ca</a></li>
+        <li><b>Email</b><br><a href="mailto:info@northbridgeacademy.study">info@northbridgeacademy.study</a></li>
       </ul>
+    </div>
+
+    <div class="nb-form-card">
+      <p class="kicker">Contact Us</p>
+      <h2>Send us a message</h2>
+      <p style="color:var(--muted)">Tell us which course you are interested in, or ask anything at all. We reply by email, usually within one business day.</p>
+      <form class="nb-form" id="nbContactForm" novalidate>
+        <div><label for="nbName">Your name *</label><input id="nbName" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="nbEmail">Your email *</label><input id="nbEmail" name="email" type="email" required autocomplete="email"></div>
+        <div class="full"><label for="nbPhone">Phone (optional)</label><input id="nbPhone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="full"><label for="nbMsg">Your message *</label><textarea id="nbMsg" name="message" rows="4" required></textarea></div>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" id="nbSubmit">Send message</button>
+        <p class="nb-form-status" id="nbStatus" role="status"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -225,6 +253,30 @@
 
 <script>
 (function(){var v=document.querySelector('.hero video.bg');if(!v)return;var tried=false;function p(){v.play().then(function(){}).catch(function(){})}p();document.addEventListener('touchstart',function(){if(!tried){tried=true;p()}},{passive:true});document.addEventListener('click',function(){if(!tried){tried=true;p()}});document.addEventListener('visibilitychange',function(){if(!document.hidden&&v.paused)p()});})();
+</script>
+
+<script>
+(function(){
+  var f=document.getElementById('nbContactForm');if(!f)return;
+  var st=document.getElementById('nbStatus'),btn=document.getElementById('nbSubmit');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=f.name.value.trim(),email=f.email.value.trim(),msg=f.message.value.trim();
+    if(!name||!email||!msg){st.className='nb-form-status err';st.textContent='Please fill in your name, email and message.';return;}
+    btn.disabled=true;btn.textContent='Sending...';st.className='nb-form-status';st.textContent='';
+    fetch('https://formsubmit.co/ajax/info@northbridgeacademy.study',{
+      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({name:name,email:email,phone:f.phone.value.trim(),message:msg,_subject:'New message from northbridgeacademy.study',_template:'table'})
+    }).then(function(r){return r.json()}).then(function(d){
+      btn.disabled=false;btn.textContent='Send message';
+      st.className='nb-form-status ok';st.textContent='Thank you, '+name.split(' ')[0]+' — your message has been sent. We will reply to '+email+'.';
+      f.reset();
+    }).catch(function(){
+      btn.disabled=false;btn.textContent='Send message';
+      st.className='nb-form-status err';st.textContent='Sorry, something went wrong. Please email us at info@northbridgeacademy.study.';
+    });
+  });
+})();
 </script>
 </body>
 </html>
